@@ -1,0 +1,36 @@
+[tool.poetry]
+name = "job-coverletter-gen"
+version = "0.1.0"
+description = "A job cover letter generator using the context from the given CV in pdf format."
+authors = ["Sukumar"]
+license = "MIT"
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.12"
+llama-index = "^0.12.5"
+langchain-chroma = "^0.1.4"
+llama-index-embeddings-ollama = "^0.5.0"
+jupyter = "^1.1.1"
+pymupdf4llm = "^0.0.17"
+llama-index-vector-stores-chroma = "^0.4.1"
+llama-index-embeddings-langchain = "^0.3.0"
+llama-index-llms-llama-cpp = "^0.3.0"
+langchain = "^0.3.11"
+langchain-community = "^0.3.11"
+
+
+[tool.poetry.group.dev.dependencies]
+black = "^24.10.0"
+isort = "^5.13.2"
+jupyter-contrib-nbextensions = "^0.7.0"
+
+
+[[tool.poetry.source]]
+name = "pytorch_cpu"
+url = "https://download.pytorch.org/whl/cpu"
+priority = "explicit"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
