@@ -24,6 +24,7 @@ langchain-community = "^0.3.11"
 black = "^24.10.0"
 isort = "^5.13.2"
 jupyter-contrib-nbextensions = "^0.7.0"
+nbdime = "^4.0.2"
 
 
 [[tool.poetry.source]]
