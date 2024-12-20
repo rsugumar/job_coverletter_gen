@@ -1,5 +1,5 @@
 # job_coverletter_gen
-Generate a Job cover letter based on your CV that's in pdf format using locally running Ollama. 
+Using locally running Ollama, generate a nice, tailored job cover letter based on your CV in PDF format that matches the job description.
 
 ## Steps to start
 - install Ollama locally (download [here](https://ollama.com))
