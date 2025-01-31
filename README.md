@@ -1,16 +1,20 @@
 # job_coverletter_gen
-Using locally running Ollama, generate a nice, tailored job cover letter based on your CV in PDF format that matches the job description.
 
-## Steps to start
-- install Ollama locally (download [here](https://ollama.com))
-- first install poetry package for creating virtualenv and package management as well. 
-- setup the virtual env using `poetry shell` and it should also install all the required packages needed.
-- in addition to the above step, please run:
-    ``` shell
-    pip install -r requirements.txt
-    ```
-    was unable to install `torch` package using `poetry` ¯\_(ツ)_/¯
-- to use the python venv in the notebook create the ipykernel using this command to use the installed dependency packages:
-    ``` shell
-    python -m ipykernel install --user --display-name $(echo `pwd`) --name $(echo `pwd` | sed -r 's$/$_$g')
-    ```
+Generate tailored job cover letters based on your CV (PDF) context and a given job description using a locally running LLM instance.
+
+## Setup
+
+1. **Install Ollama:** Download and install Ollama locally from [https://ollama.com](https://ollama.com).
+
+1. **Pull models:** Pull the required models from Ollama using the following command:
+   ```bash
+   ollama pull llama3.2
+   ```
+
+1. **Install uv:** Install uv for dependency management: `pip install uv`
+
+1. **Create Virtual Environment:**
+   ```bash
+   uv sync
+   source .venv/bin/activate
+   ```
