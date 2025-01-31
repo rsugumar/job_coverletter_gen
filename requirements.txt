@@ -1,2 +1,0 @@
-# for some strange reason unable to install torch via poetry, hence using pip
-langchain-huggingface

@@ -1,35 +1,24 @@
-[tool.poetry]
+[project]
 name = "job-coverletter-gen"
 version = "0.1.0"
 description = "A job cover letter generator using the context from the given CV in pdf format."
-authors = ["Sukumar Raghavan"]
-license = "MIT"
 readme = "README.md"
+requires-python = ">=3.13"
+dependencies = [
+    "chromadb>=0.5.23",
+    "gradio>=5.13.1",
+    "ipykernel>=6.29.5",
+    "langchain-chroma>=0.2.0",
+    "langchain-community>=0.3.15",
+    "langchain-groq>=0.2.3",
+    "langchain-huggingface>=0.1.2",
+    "langchain-ollama>=0.2.2",
+    "pymupdf>=1.25.2",
+]
 
-[tool.poetry.dependencies]
-python = "^3.12"
-langchain-chroma = "^0.1.4"
-jupyter = "^1.1.1"
-langchain = "^0.3.11"
-langchain-community = "^0.3.11"
-langchain-ollama = "^0.2.1"
-pymupdf = "^1.25.1"
-gradio = "^5.9.1"
-
-
-[tool.poetry.group.dev.dependencies]
-black = {extras = ["jupyter"], version = "^24.10.0"}
-isort = "^5.13.2"
-jupyter-contrib-nbextensions = "^0.7.0"
-nbdime = "^4.0.2"
-jupyter-nbextensions-configurator = "^0.6.4"
-
-
-[[tool.poetry.source]]
-name = "pytorch_cpu"
-url = "https://download.pytorch.org/whl/cpu"
-priority = "explicit"
-
-[build-system]
-requires = ["poetry-core"]
-build-backend = "poetry.core.masonry.api"
+[dependency-groups]
+dev = [
+    "black>=25.1.0",
+    "isort>=6.0.0",
+    "nbdime>=4.0.2",
+]
